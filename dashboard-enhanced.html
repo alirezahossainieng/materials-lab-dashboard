@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>داشبورد پیشرفته | آزمایشگاه تخصصی مواد</title>
+    
+    <!-- Tailwind with DaisyUI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            daisyui: {
+                themes: [{
+                    light: {
+                        "primary": "#3b82f6",
+                        "secondary": "#f59e0b",
+                        "accent": "#10b981",
+                        "neutral": "#1e293b",
+                        "base-100": "#ffffff",
+                    }
+                }],
+            },
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.js"></script>
+    
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: Vazirmatn, sans-serif;
+            @apply bg-gray-50;
+        }
+        .stat-card:hover {
+            @apply -translate-y-1 shadow-lg;
+        }
+        .nav-item {
+            @apply transition-colors duration-200;
+        }
+    </style>
+</head>
+<body>
+    <!-- Drawer Layout -->
+    <div class="drawer lg:drawer-open">
+        <input id="sidebar-drawer" type="checkbox" class="drawer-toggle" />
+        
+        <!-- Content -->
+        <div class="drawer-content flex flex-col min-h-screen">
+            <!-- Gradient Header -->
+            <header class="sticky top-0 z-40 bg-gradient-to-r from-primary to-primary/90 text-white shadow-lg">
+                <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+                    <label for="sidebar-drawer" class="btn btn-ghost btn-circle lg:hidden text-white hover:bg-white/10">
+                        <i class="fas fa-bars text-xl"></i>
+                    </label>
+                    
+                    <div class="flex items-center space-x-reverse space-x-2">
+                        <i class="fas fa-chart-pie text-xl"></i>
+                        <h1 class="text-xl font-bold">داشبورد پیشرفته</h1>
+                    </div>
+                    
+                    <div class="flex items-center space-x-reverse space-x-3">
+                        <button class="btn btn-ghost btn-circle text-white hover:bg-white/10">
+                            <i class="fas fa-bell text-lg"></i>
+                        </button>
+                        <div class="avatar">
+                            <div class="w-8 rounded-full bg-white text-primary flex items-center justify-center">
+                                <i class="fas fa-user text-sm"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Main Content -->
+            <main class="flex-1 p-4 md:p-6">
+                <!-- Stats Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                    <!-- Stat Card 1 -->
+                    <div class="stat-card bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden transition-all duration-300">
+                        <div class="p-5">
+                            <div class="flex justify-between">
+                                <div>
+                                    <p class="text-sm font-medium text-gray-500">کاربران فعال</p>
+                                    <p class="text-2xl font-bold mt-1 text-gray-800">1,248</p>
+                                </div>
+                                <div class="h-12 w-12 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center">
+                                    <i class="fas fa-users text-xl"></i>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <span class="text-xs font-medium px-2 py-1 rounded-full bg-green-50 text-green-600">
+                                    <i class="fas fa-arrow-up ml-1"></i> 12.5%
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- More stat cards... -->
+                </div>
+                
+                <!-- Content Sections -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <!-- Recent Activity -->
+                    <div class="lg:col-span-2 bg-white rounded-xl shadow-sm border border-gray-100 p-5">
+                        <h2 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                            <i class="fas fa-history text-blue-500 ml-2"></i>
+                            فعالیت‌های اخیر
+                        </h2>
+                        <!-- Activity list -->
+                    </div>
+                    
+                    <!-- Quick Actions -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-5">
+                        <h2 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+                            <i class="fas fa-bolt text-yellow-500 ml-2"></i>
+                            اقدامات سریع
+                        </h2>
+                        <!-- Action buttons -->
+                    </div>
+                </div>
+            </main>
+        </div>
+        
+        <!-- Sidebar -->
+        <div class="drawer-side z-50">
+            <label for="sidebar-drawer" class="drawer-overlay"></label>
+            <aside class="w-64 bg-white border-l border-gray-200 p-4 h-full">
+                <!-- Brand -->
+                <div class="flex items-center space-x-reverse space-x-3 mb-8 px-2 py-4">
+                    <div class="avatar">
+                        <div class="w-10 rounded-full bg-primary text-white flex items-center justify-center">
+                            <i class="fas fa-flask text-lg"></i>
+                        </div>
+                    </div>
+                    <h2 class="text-xl font-bold text-gray-800">آزمایشگاه مواد</h2>
+                </div>
+                
+                <!-- Menu -->
+                <ul class="menu text-gray-700 space-y-1">
+                    <li>
+                        <details open>
+                            <summary class="nav-item hover:bg-gray-100 rounded-lg">
+                                <i class="fas fa-tachometer-alt text-primary"></i>
+                                <span>داشبورد</span>
+                            </summary>
+                            <ul>
+                                <li><a class="nav-item hover:bg-gray-100">آمار کلی</a></li>
+                                <li><a class="nav-item hover:bg-gray-100">گزارشات</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <!-- More menu items -->
+                </ul>
+            </aside>
+        </div>
+    </div>
+</body>
+</html>
