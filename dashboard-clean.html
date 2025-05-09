@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>داشبورد مدیریت | آزمایشگاه مواد</title>
+    
+    <!-- Tailwind with DaisyUI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            daisyui: {
+                themes: [{
+                    labtheme: {
+                        "primary": "#2563eb",
+                        "secondary": "#7c3aed", 
+                        "accent": "#10b981",
+                        "neutral": "#1e293b",
+                        "base-100": "#ffffff",
+                        "info": "#3b82f6",
+                        "success": "#10b981",
+                        "warning": "#f59e0b",
+                        "error": "#ef4444",
+                    }
+                }],
+            },
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.js"></script>
+    
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-sans">
+    <div class="drawer lg:drawer-open">
+        <input id="sidebar-drawer" type="checkbox" class="drawer-toggle" />
+        
+        <!-- Content -->
+        <div class="drawer-content flex flex-col min-h-screen">
+            <!-- Clean Header -->
+            <header class="sticky top-0 z-40 bg-white border-b border-gray-200">
+                <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+                    <label for="sidebar-drawer" class="btn btn-ghost btn-square lg:hidden">
+                        <i class="fas fa-bars text-lg"></i>
+                    </label>
+                    
+                    <h1 class="text-lg font-semibold text-gray-800">
+                        <i class="fas fa-chart-line text-primary ml-2"></i>
+                        داشبورد مدیریت
+                    </h1>
+                    
+                    <div class="flex items-center gap-2">
+                        <button class="btn btn-ghost btn-square">
+                            <i class="fas fa-bell text-gray-500"></i>
+                        </button>
+                        <div class="avatar placeholder">
+                            <div class="w-8 rounded-full bg-primary text-white">
+                                <span>مد</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Main Content -->
+            <main class="flex-1 p-4 md:p-6">
+                <!-- Stats Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                    <!-- Stat Card -->
+                    <div class="card bg-white shadow-sm border border-gray-100">
+                        <div class="card-body p-4">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="text-xs text-gray-500 mb-1">کاربران فعال</p>
+                                    <h3 class="text-xl font-bold text-gray-800">1,248</h3>
+                                    <p class="text-xs text-success mt-1">
+                                        <i class="fas fa-arrow-up ml-1"></i>
+                                        12.5% افزایش
+                                    </p>
+                                </div>
+                                <div class="p-2 rounded-lg bg-primary/10 text-primary">
+                                    <i class="fas fa-users text-lg"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- More stat cards... -->
+                </div>
+                
+                <!-- Content Area -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <!-- Recent Activity -->
+                    <div class="lg:col-span-2 card bg-white shadow-sm border border-gray-100">
+                        <div class="card-body">
+                            <h2 class="card-title text-gray-800">
+                                <i class="fas fa-history text-primary ml-2"></i>
+                                فعالیت‌های اخیر
+                            </h2>
+                            <!-- Activity items -->
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Actions -->
+                    <div class="card bg-white shadow-sm border border-gray-100">
+                        <div class="card-body">
+                            <h2 class="card-title text-gray-800">
+                                <i class="fas fa-bolt text-secondary ml-2"></i>
+                                اقدامات سریع
+                            </h2>
+                            <!-- Action buttons -->
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        
+        <!-- Sidebar -->
+        <div class="drawer-side z-50">
+            <label for="sidebar-drawer" class="drawer-overlay"></label>
+            <aside class="w-64 bg-white border-l border-gray-200 p-4 h-full">
+                <!-- Brand -->
+                <div class="flex items-center gap-3 mb-8 px-2 py-3">
+                    <div class="p-2 rounded-lg bg-primary text-white">
+                        <i class="fas fa-flask text-lg"></i>
+                    </div>
+                    <h2 class="text-lg font-semibold text-gray-800">آزمایشگاه مواد</h2>
+                </div>
+                
+                <!-- Menu -->
+                <ul class="menu text-gray-700 space-y-1">
+                    <li>
+                        <a class="active:bg-primary/10 hover:bg-gray-100 rounded-lg">
+                            <i class="fas fa-home text-primary"></i>
+                            داشبورد
+                        </a>
+                    </li>
+                    <li>
+                        <details open>
+                            <summary class="hover:bg-gray-100 rounded-lg">
+                                <i class="fas fa-users-cog text-secondary"></i>
+                                مدیریت کاربران
+                            </summary>
+                            <ul>
+                                <li><a class="hover:bg-gray-100">لیست کاربران</a></li>
+                                <li><a class="hover:bg-gray-100">افزودن کاربر</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <!-- More menu items -->
+                </ul>
+            </aside>
+        </div>
+    </div>
+</body>
+</html>
