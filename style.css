@@ -1,0 +1,81 @@
+/* GLOBAL STYLES */
+body {
+  font-family: Vazirmatn, sans-serif;
+}
+
+/* HEADER STYLES */
+#mobile-menu {
+  display: none;
+}
+
+/* HERO SECTION */
+.hero-bg {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+}
+
+/* LABS PAGE STYLES */
+.lab-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.lab-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.lab-card img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+
+/* LAB DETAILS PAGE */
+.lab-header {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+              url('https://images.unsplash.com/photo-1581093450021-4a7360e9a6d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1500&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+/* COMMON COMPONENTS */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badge-active {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.badge-standard {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+  .lab-header {
+    padding: 4rem 0;
+  }
+  
+  .labs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .labs-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
