@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت نام | آزمایشگاه تخصصی مواد</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts.css" rel="stylesheet">
+    <style>
+        body { font-family: Vazirmatn, sans-serif; }
+        .register-container {
+            background: linear-gradient(135deg, rgba(16,185,129,0.1) 0%, rgba(255,255,255,1) 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2 space-x-reverse">
+                <i class="fas fa-flask text-blue-800 text-2xl"></i>
+                <h1 class="text-2xl font-bold text-blue-800">آزمایشگاه مواد</h1>
+            </div>
+            <a href="index.html" class="text-blue-600 hover:text-blue-800 font-medium">
+                بازگشت به صفحه اصلی
+                <i class="fas fa-arrow-left mr-2"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center p-4">
+        <div class="w-full max-w-md register-container rounded-xl shadow-lg overflow-hidden">
+            <!-- Register Header -->
+            <div class="bg-green-600 text-white p-6 text-center">
+                <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fas fa-user-plus text-2xl"></i>
+                </div>
+                <h2 class="text-2xl font-bold mb-2">ایجاد حساب کاربری</h2>
+                <p class="text-green-100">لطفا اطلاعات مورد نیاز را وارد نمایید</p>
+            </div>
+            
+            <!-- Register Form -->
+            <div class="bg-white p-6">
+                <form id="registerForm">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2 font-medium" for="fullname">
+                            <i class="fas fa-user ml-2 text-green-600"></i>
+                            نام کامل
+                        </label>
+                        <input type="text" id="fullname" 
+                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition duration-200"
+                               placeholder="نام و نام خانوادگی">
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2 font-medium" for="email">
+                            <i class="fas fa-envelope ml-2 text-green-600"></i>
+                            ایمیل
+                        </label>
+                        <input type="email" id="email" 
+                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition duration-200"
+                               placeholder="example@example.com">
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2 font-medium" for="phone">
+                            <i class="fas fa-phone ml-2 text-green-600"></i>
+                            تلفن همراه
+                        </label>
+                        <input type="tel" id="phone" 
+                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition duration-200"
+                               placeholder="09xxxxxxxxx">
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2 font-medium" for="password">
+                            <i class="fas fa-lock ml-2 text-green-600"></i>
+                            رمز عبور
+                        </label>
+                        <input type="password" id="password" 
+                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition duration-200"
+                               placeholder="حداقل 8 کاراکتر">
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2 font-medium" for="confirmPassword">
+                            <i class="fas fa-lock ml-2 text-green-600"></i>
+                            تکرار رمز عبور
+                        </label>
+                        <input type="password" id="confirmPassword" 
+                               class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition duration-200"
+                               placeholder="تکرار رمز عبور">
+                    </div>
+                    
+                    <div class="flex items-center mb-6">
+                        <input type="checkbox" id="terms" class="h-4 w-4 text-green-600 focus:ring-green-500 border-gray-300 rounded">
+                        <label for="terms" class="mr-2 block text-sm text-gray-700">
+                            با <a href="#" class="text-green-600 hover:text-green-800">شرایط و قوانین</a> موافقم
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-4 rounded-lg font-medium transition duration-300 shadow-md">
+                        ثبت نام
+                    </button>
+                    
+                    <div class="mt-6 text-center">
+                        <p class="text-gray-600">
+                            حساب کاربری دارید؟
+                            <a href="login.html" class="text-green-600 font-medium hover:text-green-800 transition duration-200">
+                                وارد شوید
+                            </a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 1402 کلیه حقوق برای آزمایشگاه تخصصی مواد محفوظ است.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const fullname = document.getElementById('fullname').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const confirmPassword = document.getElementById('confirmPassword').value.trim();
+            const terms = document.getElementById('terms').checked;
+
+            // Validation
+            if(!fullname) {
+                alert('لطفا نام کامل خود را وارد نمایید');
+                return;
+            }
+
+            if(!email || !email.includes('@')) {
+                alert('لطفا یک ایمیل معتبر وارد نمایید');
+                return;
+            }
+
+            if(!phone || phone.length !== 11 || !phone.startsWith('09')) {
+                alert('لطفا شماره تلفن همراه معتبر وارد نمایید');
+                return;
+            }
+
+            if(password.length < 8) {
+                alert('رمز عبور باید حداقل 8 کاراکتر باشد');
+                return;
+            }
+
+            if(password !== confirmPassword) {
+                alert('رمز عبور و تکرار آن مطابقت ندارند');
+                return;
+            }
+
+            if(!terms) {
+                alert('لطفا با شرایط و قوانین موافقت نمایید');
+                return;
+            }
+
+            // If all validations pass
+            alert('ثبت نام با موفقیت انجام شد!');
+            window.location.href = 'dashboard.html';
+        });
+    </script>
+</body>
+</html>
