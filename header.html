@@ -1,0 +1,38 @@
+<!-- Header Component -->
+<header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <div class="flex items-center space-x-2 space-x-reverse">
+            <i class="fas fa-flask text-blue-800 text-2xl"></i>
+            <h1 class="text-2xl font-bold text-blue-800">آزمایشگاه مواد</h1>
+        </div>
+        <nav class="hidden lg:flex space-x-8 space-x-reverse">
+            <a href="index.html" class="text-gray-700 hover:text-blue-800 font-medium">صفحه اصلی</a>
+            <a href="labs.html" class="text-gray-700 hover:text-blue-800 font-medium">آزمایشگاه‌ها</a>
+            <a href="services.html" class="text-gray-700 hover:text-blue-800 font-medium">خدمات</a>
+            <a href="about.html" class="text-gray-700 hover:text-blue-800 font-medium">درباره ما</a>
+            <a href="contact.html" class="text-gray-700 hover:text-blue-800 font-medium">تماس با ما</a>
+        </nav>
+        <div class="flex items-center space-x-4 space-x-reverse">
+            <a href="login.html" class="text-gray-700 hover:text-blue-800 font-medium">ورود</a>
+            <a href="register.html" class="bg-blue-800 text-white px-4 py-2 rounded-md hover:bg-blue-900 font-medium transition duration-300">ثبت نام</a>
+        </div>
+        <button id="mobile-menu-button" class="xl:hidden text-gray-700">
+            <i class="fas fa-bars text-xl"></i>
+        </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden xl:hidden bg-white py-2 px-4 shadow-md">
+        <a href="index.html" class="block py-2 text-gray-700 hover:text-blue-800">صفحه اصلی</a>
+        <a href="labs.html" class="block py-2 text-gray-700 hover:text-blue-800">آزمایشگاه‌ها</a>
+        <a href="services.html" class="block py-2 text-gray-700 hover:text-blue-800">خدمات</a>
+        <a href="about.html" class="block py-2 text-gray-700 hover:text-blue-800">درباره ما</a>
+        <a href="contact.html" class="block py-2 text-gray-700 hover:text-blue-800">تماس با ما</a>
+    </div>
+</header>
+
+<script>
+// Mobile menu toggle functionality
+document.getElementById('mobile-menu-button').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+});
+</script>
