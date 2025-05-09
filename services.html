@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمات آزمایشگاهی | آزمایشگاه تخصصی مواد</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts.css" rel="stylesheet">
+    <style>
+        body { font-family: Vazirmatn, sans-serif; }
+        .service-card:hover { transform: translateY(-5px); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2 space-x-reverse">
+                <i class="fas fa-vial text-blue-800 text-2xl"></i>
+                <h1 class="text-2xl font-bold text-blue-800">آزمایشگاه مواد</h1>
+            </div>
+            <nav class="hidden lg:flex space-x-8 space-x-reverse">
+                <a href="index.html" class="text-gray-700 hover:text-blue-800 font-medium">صفحه اصلی</a>
+                <a href="labs.html" class="text-gray-700 hover:text-blue-800 font-medium">آزمایشگاه‌ها</a>
+                <a href="services.html" class="text-blue-800 font-medium">خدمات</a>
+                <a href="#" class="text-gray-700 hover:text-blue-800 font-medium">تماس با ما</a>
+            </nav>
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="login.html" class="text-gray-700 hover:text-blue-800 font-medium">ورود</a>
+                <a href="dashboard.html" class="bg-blue-800 text-white px-4 py-2 rounded-md hover:bg-blue-900 font-medium transition duration-300">ثبت نام</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold mb-4">خدمات آزمایشگاهی</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-8">کلیه خدمات تخصصی آزمایشگاهی در یک نگاه</p>
+            
+            <!-- Search Box -->
+            <div class="max-w-md mx-auto relative mb-8">
+                <input type="text" id="serviceSearch" placeholder="جستجوی خدمات..." 
+                       class="w-full pr-10 pl-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                <div class="absolute left-3 top-2.5 text-gray-400">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services Grid -->
+        <div id="servicesContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Soil Tests -->
+            <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-vial text-blue-800 text-lg"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mr-2">آزمایش دانه‌بندی</h3>
+                    </div>
+                    <div class="text-gray-600 mb-4">
+                        <p>تعیین توزیع اندازه ذرات خاک</p>
+                        <div class="mt-2 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-clock ml-1"></i> 2 روز کاری
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-green-600 font-medium">1,200,000 تومان</span>
+                        <a href="service-details.html" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm transition">
+                            مشاهده جزئیات
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-vial text-blue-800 text-lg"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mr-2">حدود اتربرگ</h3>
+                    </div>
+                    <div class="text-gray-600 mb-4">
+                        <p>تعیین حد روانی و حد خمیری خاک</p>
+                        <div class="mt-2 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-clock ml-1"></i> 3 روز کاری
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-green-600 font-medium">1,500,000 تومان</span>
+                        <a href="lab-details.html?service=atterberg" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm transition">
+                            مشاهده جزئیات
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-vial text-blue-800 text-lg"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mr-2">تراکم پرو케or</h3>
+                    </div>
+                    <div class="text-gray-600 mb-4">
+                        <p>تعیین رابطه رطوبت-تراکم خاک</p>
+                        <div class="mt-2 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-clock ml-1"></i> 2 روز کاری
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-green-600 font-medium">1,800,000 تومان</span>
+                        <a href="lab-details.html?service=proctor" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm transition">
+                            مشاهده جزئیات
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Concrete Tests -->
+            <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-vial text-blue-800 text-lg"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mr-2">مقاومت فشاری</h3>
+                    </div>
+                    <div class="text-gray-600 mb-4">
+                        <p>آزمایش مقاومت فشاری بتن</p>
+                        <div class="mt-2 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-clock ml-1"></i> 1 روز کاری
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-green-600 font-medium">1,000,000 تومان</span>
+                        <a href="lab-details.html?service=compression" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm transition">
+                            مشاهده جزئیات
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-vial text-blue-800 text-lg"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mr-2">آزمایش اسلامپ</h3>
+                    </div>
+                    <div class="text-gray-600 mb-4">
+                        <p>اندازه گیری کارایی بتن تازه</p>
+                        <div class="mt-2 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-clock ml-1"></i> 1 روز کاری
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-green-600 font-medium">800,000 تومان</span>
+                        <a href="lab-details.html?service=slump" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm transition">
+                            مشاهده جزئیات
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Metallurgy Tests -->
+            <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-vial text-blue-800 text-lg"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mr-2">آنالیز شیمیایی</h3>
+                    </div>
+                    <div class="text-gray-600 mb-4">
+                        <p>تعیین ترکیبات شیمیایی فلزات</p>
+                        <div class="mt-2 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-clock ml-1"></i> 3 روز کاری
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-green-600 font-medium">2,000,000 تومان</span>
+                        <a href="lab-details.html?service=chemical" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm transition">
+                            مشاهده جزئیات
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="border-t border-gray-700 pt-6 text-center text-gray-400">
+                <p>© 1402 کلیه حقوق برای آزمایشگاه تخصصی مواد محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('serviceSearch');
+            const servicesContainer = document.getElementById('servicesContainer');
+            const serviceCards = Array.from(document.querySelectorAll('.service-card'));
+
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.trim().toLowerCase();
+                
+                serviceCards.forEach(card => {
+                    const title = card.querySelector('h2').textContent.toLowerCase();
+                    const services = Array.from(card.querySelectorAll('li span:first-child'))
+                        .map(span => span.textContent.toLowerCase())
+                        .join(' ');
+
+                    if (title.includes(searchTerm) || services.includes(searchTerm)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
