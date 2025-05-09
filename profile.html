@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پروفایل کاربری | آزمایشگاه تخصصی مواد</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts.css" rel="stylesheet">
+    <style>
+        body { font-family: Vazirmatn, sans-serif; }
+        .profile-header {
+            background: linear-gradient(135deg, rgba(59,130,246,0.1) 0%, rgba(255,255,255,1) 100%);
+        }
+        .nav-tab.active {
+            border-bottom: 3px solid #3b82f6;
+            color: #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2 space-x-reverse">
+                <i class="fas fa-flask text-blue-800 text-2xl"></i>
+                <h1 class="text-2xl font-bold text-blue-800">آزمایشگاه مواد</h1>
+            </div>
+            <nav class="hidden lg:flex space-x-8 space-x-reverse">
+                <a href="index.html" class="text-gray-700 hover:text-blue-800 font-medium">صفحه اصلی</a>
+                <a href="labs.html" class="text-gray-700 hover:text-blue-800 font-medium">آزمایشگاه‌ها</a>
+                <a href="services.html" class="text-gray-700 hover:text-blue-800 font-medium">خدمات</a>
+            </nav>
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <a href="profile.html" class="flex items-center text-gray-700 hover:text-blue-800">
+                    <span class="hidden md:inline">حساب کاربری</span>
+                    <i class="fas fa-user-circle text-xl ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Profile Content -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="flex flex-col md:flex-row gap-6">
+            <!-- Profile Sidebar -->
+            <div class="md:w-1/4">
+                <div class="profile-header rounded-xl shadow-md p-6 text-center">
+                    <div class="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 overflow-hidden">
+                        <img src="https://ui-avatars.com/api/?name=کاربر+نمونه&background=3b82f6&color=fff&size=128" 
+                             alt="پروفایل کاربر" class="w-full h-full object-cover">
+                    </div>
+                    <h2 class="text-xl font-bold mb-1">کاربر نمونه</h2>
+                    <p class="text-gray-600 mb-4">example@example.com</p>
+                    <div class="flex justify-center space-x-2 space-x-reverse">
+                        <button class="p-2 bg-blue-100 text-blue-800 rounded-full hover:bg-blue-200 transition">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="p-2 bg-blue-100 text-blue-800 rounded-full hover:bg-blue-200 transition">
+                            <i class="fas fa-cog"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-md p-4 mt-4">
+                    <h3 class="font-bold text-lg mb-3 border-b pb-2">اطلاعات حساب</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between">
+                            <span class="text-gray-600">عضویت از</span>
+                            <span class="font-medium">1402/01/15</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-gray-600">آخرین ورود</span>
+                            <span class="font-medium">1402/05/20</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-gray-600">وضعیت</span>
+                            <span class="text-green-600 font-medium">فعال</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main Profile Content -->
+            <div class="md:w-3/4">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <!-- Profile Navigation -->
+                    <div class="border-b border-gray-200">
+                        <nav class="flex -mb-px">
+                            <a href="#" class="nav-tab active py-4 px-6 text-center font-medium">
+                                <i class="fas fa-user ml-2"></i>
+                                اطلاعات شخصی
+                            </a>
+                            <a href="#" class="nav-tab py-4 px-6 text-center font-medium text-gray-500 hover:text-blue-800">
+                                <i class="fas fa-clipboard-list ml-2"></i>
+                                درخواست‌ها
+                            </a>
+                            <a href="#" class="nav-tab py-4 px-6 text-center font-medium text-gray-500 hover:text-blue-800">
+                                <i class="fas fa-lock ml-2"></i>
+                                امنیت
+                            </a>
+                        </nav>
+                    </div>
+
+                    <!-- Personal Information -->
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-6">اطلاعات شخصی</h3>
+                        
+                        <form>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label class="block text-gray-700 mb-2" for="firstName">نام</label>
+                                    <input type="text" id="firstName" value="کاربر" 
+                                           class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 mb-2" for="lastName">نام خانوادگی</label>
+                                    <input type="text" id="lastName" value="نمونه" 
+                                           class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 mb-2" for="email">ایمیل</label>
+                                    <input type="email" id="email" value="example@example.com" 
+                                           class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 mb-2" for="phone">تلفن همراه</label>
+                                    <input type="tel" id="phone" value="09123456789" 
+                                           class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                </div>
+                            </div>
+
+                            <div class="mb-6">
+                                <label class="block text-gray-700 mb-2" for="address">آدرس</label>
+                                <textarea id="address" rows="3" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">تهران، خیابان نمونه، پلاک ۱۲۳</textarea>
+                            </div>
+
+                            <div class="flex justify-end">
+                                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-lg font-medium transition duration-300">
+                                    ذخیره تغییرات
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Recent Activities -->
+                <div class="bg-white rounded-xl shadow-md p-6 mt-6">
+                    <h3 class="text-xl font-bold mb-6">فعالیت‌های اخیر</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start border-b border-gray-100 pb-4">
+                            <div class="bg-blue-100 text-blue-800 p-2 rounded-full mr-3">
+                                <i class="fas fa-vial"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="font-medium">درخواست آزمایش دانه‌بندی خاک</p>
+                                <p class="text-sm text-gray-500">1402/05/15 - در حال انجام</p>
+                            </div>
+                            <a href="#" class="text-blue-600 hover:text-blue-800 text-sm">مشاهده</a>
+                        </div>
+                        <div class="flex items-start border-b border-gray-100 pb-4">
+                            <div class="bg-green-100 text-green-800 p-2 rounded-full mr-3">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="flex-1">
+                                <p class="font-medium">آزمایش مقاومت فشاری بتن تکمیل شد</p>
+                                <p class="text-sm text-gray-500">1402/05/10 - تکمیل شده</p>
+                            </div>
+                            <a href="#" class="text-blue-600 hover:text-blue-800 text-sm">مشاهده گزارش</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 mt-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 1402 کلیه حقوق برای آزمایشگاه تخصصی مواد محفوظ است.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tab switching functionality
+        document.querySelectorAll('.nav-tab').forEach(tab => {
+            tab.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active', 'text-blue-800'));
+                this.classList.add('active', 'text-blue-800');
+                // Here you would load the appropriate content for the tab
+            });
+        });
+    </script>
+</body>
+</html>
